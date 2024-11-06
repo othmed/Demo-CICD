@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${HOST_NAME:localhost}:${DATABASE_PORT:5432}/${DATABASE_NAME:fruitsdb}?currentSchema=public
+    password: ${DATABASE_USER_PASSWORD:admin}
+    username: ${DATABASE_USER_NAME:admin}
+  jpa:
+    show-sql: true
+    generate-ddl: true
+  application:
+    name: Basket Fruit
+server:
+  port: 9002
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
